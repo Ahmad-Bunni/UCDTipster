@@ -1,7 +1,5 @@
-import csv_access
-import write_bets
+from src import csv_access, write_bets
 from collections import defaultdict
-from operator import itemgetter
 from datetime import datetime
 from datetime import timedelta
 

@@ -1,5 +1,4 @@
-import write_bets
-import display_bets
+from src import write_bets, display_bets
 
 
 def menu():
