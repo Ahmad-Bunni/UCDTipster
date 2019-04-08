@@ -101,4 +101,4 @@ def average_time():
         i = i + 1
 
     avg_delta = sumdeltas / (len(dates_list) - 1)
-    print(avg_delta.days)
+    print('{}{}{}'.format('The average time between bets is: ',avg_delta.days, ' day(s)'))
