@@ -92,7 +92,7 @@ def record_new_bet():
 
     bet_result = get_bet_result()
 
-    csv_access.CsvFile().write([race_course, horse_name, year,
+    csv_access.CsvFile().write([race_course.strip(), horse_name.strip(), year,
                                 "{:02d}".format(month),
                                 "{:02d}".format(day),
                                 bet_amount, bet_result])
