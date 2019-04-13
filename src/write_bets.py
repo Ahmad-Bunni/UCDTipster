@@ -33,7 +33,6 @@ def get_race_month():
         except:
             month = 0
 
-    month = int(("%02d" % month))
     return month;
 
 def get_race_day(year, month):
@@ -46,7 +45,6 @@ def get_race_day(year, month):
         except:
             day = 0
 
-    day = int(("%02d" % day))
     return day;
 
 def get_bet_amount():
@@ -94,7 +92,10 @@ def record_new_bet():
 
     bet_result = get_bet_result()
 
-    csv_access.CsvFile().write([race_course, horse_name, year, month, day, bet_amount, bet_result])
+    csv_access.CsvFile().write([race_course, horse_name, year,
+                                "{:02d}".format(month),
+                                "{:02d}".format(day),
+                                bet_amount, bet_result])
 
     print('-- A new bet has been recorded --')
 
