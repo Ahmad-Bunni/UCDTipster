@@ -72,7 +72,7 @@ def get_bet_result():
     if is_won == 1:
         result = "won"
     else:
-        result = "loss"
+        result = "lost"
 
     return result
 
